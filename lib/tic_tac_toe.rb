@@ -127,4 +127,29 @@ class TicTacToe
       return @board[has_won[0]]
     end
   end
+
+  def play board
+    # until the game is over
+    #   take turns
+    # end
+    #
+    # if the game was won
+    #   congratulate the winner
+    # else if the game was a draw
+    #   tell the players it has been a draw
+    # end
+
+    while !over?(board) do
+      turn board
+    end
+
+    winner = winner(board)
+    if winner
+      puts "Congratulations #{winner}!"
+    end
+
+    if draw?(board)
+      puts "Cat's Game!"
+    end
+  end
 end
