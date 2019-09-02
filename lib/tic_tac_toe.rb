@@ -128,7 +128,7 @@ class TicTacToe
     end
   end
 
-  def play board
+  def play
     # until the game is over
     #   take turns
     # end
@@ -139,16 +139,16 @@ class TicTacToe
     #   tell the players it has been a draw
     # end
 
-    while !over?(board) do
-      turn board
+    while !over? do
+      turn
     end
 
-    winner = winner(board)
+    winner = winner()
     if winner
       puts "Congratulations #{winner}!"
     end
 
-    if draw?(board)
+    if draw?
       puts "Cat's Game!"
     end
   end
