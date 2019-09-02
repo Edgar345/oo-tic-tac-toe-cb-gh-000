@@ -120,4 +120,11 @@ class TicTacToe
       return true
     end
   end
+
+  def winner
+    has_won = won?
+    if has_won
+      return @board[has_won[0]]
+    end
+  end
 end
